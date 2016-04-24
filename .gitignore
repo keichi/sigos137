@@ -175,4 +175,6 @@ TSWLatexianTemp*
 # KBibTeX
 *~*
 
+*.pdf
+!src/*.pdf
 
