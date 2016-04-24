@@ -177,4 +177,7 @@ TSWLatexianTemp*
 
 *.pdf
 !src/*.pdf
+src/*.tex
+src/*.tex-e
+!src/main.tex
 
