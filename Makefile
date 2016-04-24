@@ -21,7 +21,7 @@ all: main.pdf
 	$(BB) $<
 
 .md.tex:
-	$(PANDOC) --chapters --listings -S -o $@ $<
+	$(PANDOC) --listings -S -o $@ $<
 	sed -i -e "s/\\\\\\$$/\\$$/g" $@
 
 main.pdf: $(MAIN) $(SOURCES) $(IMAGES) $(IMAGE_BBS) $(REFERENCES) $(STYLES)
