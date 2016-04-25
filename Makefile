@@ -10,7 +10,7 @@ STYLES=
 RM=rm
 
 .SUFFIXES: .tex .pdf .md .bb .png
-.PHONY: all clean semiclean open watch
+.PHONY: all clean semiclean open watch lint
 
 all: main.pdf
 
@@ -21,7 +21,7 @@ all: main.pdf
 	$(BB) $<
 
 .md.tex:
-	$(PANDOC) --listings -S -o $@ $<
+	$(PANDOC) --wrap=preserve --listings -S -o $@ $<
 	sed -i -e "s/\\\\\\$$/\\$$/g" $@
 
 main.pdf: $(MAIN) $(SOURCES) $(IMAGES) $(IMAGE_BBS) $(REFERENCES) $(STYLES)
@@ -41,4 +41,7 @@ open: main.pdf
 
 watch: main.pdf
 	latexmk -pvc $(MAIN)
+
+lint: $(SOURCES)
+	redpen -c redpen.xml -f latex $(SOURCES)
 
