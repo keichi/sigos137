@@ -1,4 +1,9 @@
 build:
-  image: keichi/redpen-pandoc
-  commands:
-    - make lint
+  lint:
+    image: keichi/redpen-pandoc
+    commands:
+      - make lint
+  typeset:
+    image: keichi/texlive-pandoc
+    commands:
+      - make

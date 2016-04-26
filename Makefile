@@ -1,10 +1,8 @@
 PANDOC=pandoc
-BB=ebb
 MARKDOWNS=$(wildcard ./src/*.md)
 MAIN=src/main.tex
 SOURCES=$(MARKDOWNS:.md=.tex)
 IMAGES=$(wildcard ./img/*.png) $(wildcard ./img/*.pdf)
-IMAGE_BBS=$(addsuffix .bb, $(basename $(IMAGES)))
 REFERENCES=references.bib
 STYLES=
 RM=rm
@@ -14,17 +12,11 @@ RM=rm
 
 all: main.pdf
 
-.png.bb:
-	$(BB) $<
-
-.pdf.bb:
-	$(BB) $<
-
 .md.tex:
 	$(PANDOC) --wrap=preserve --listings -S -o $@ $<
 	sed -i -e "s/\\\\\\$$/\\$$/g" $@
 
-main.pdf: $(MAIN) $(SOURCES) $(IMAGES) $(IMAGE_BBS) $(REFERENCES) $(STYLES)
+main.pdf: $(MAIN) $(SOURCES) $(IMAGES) $(REFERENCES) $(STYLES)
 	latexmk $(MAIN)
 
 semiclean:

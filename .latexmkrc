@@ -2,7 +2,7 @@ $latexargs          = '-synctex=1 -halt-on-error';
 $latexsilentargs    = $latexargs . ' -interaction=batchmode';
 $latex            = 'platex ' . $latexargs;
 $latex_silent     = 'platex ' . $latexsilentargs;
-$dvipdf           = 'dvipdfmx %O -o %D %S';
+$dvipdf           = 'dvipdfmx -p a4 %O -o %D %S';
 $bibtex           = 'pbibtex';
 $makeindex        = 'mendex %O -o %D %S';
 $max_repeat       = 5;
