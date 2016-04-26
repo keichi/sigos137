@@ -12,12 +12,7 @@ SDN-MPIは，計算ノード間を接続するの相互結合網がSDNアーキ�
 理を行う．SDNの利点としてネットワークがプログラム可能になること，動的な制御が
 できること，集中制御ができることがあげられる．
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics{sdn-arch.pdf}
-    \caption{SDNのアーキテクチャ}
-    \label{fig:sdn-arch}
-\end{figure}
+![SDNのアーキテクチャ\label{fig:sdn-arch}](sdn-arch.pdf)
 
 <!-- SDN-MPIのコンセプト -->
 SDN-MPIのコンセプトを図 \ref{fig:sdn-mpi}に示す．SDN-MPIの基本的な考え方は，
@@ -25,10 +20,5 @@ MPIを利用するアプリケーションから分散プロセス間の通信�
 通信特性に応じた最適なネットワーク制御を実行することにある．これまでの研究開発
 により，いくつかのMPI関数の高速化を実証した．\cite{Dashdavaa2013,Takahashi2014}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics{sdn-mpi.pdf}
-    \caption{SDN-MPIの概要}
-    \label{fig:sdn-mpi}
-\end{figure}
+![SDN-MPIの概要\label{fig:sdn-mpi}](sdn-mpi.pdf)
 
