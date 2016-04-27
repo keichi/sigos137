@@ -4,7 +4,9 @@
         <validator name="SentenceLength">
             <property name="max_len" value="100"/>
         </validator>
-        <validator name="CommaNumber" />
+        <validator name="CommaNumber">
+            <property name="max_num" value="4"/>
+        </validator>
 
         <!--Rules on expressions-->
         <validator name="ParagraphNumber">

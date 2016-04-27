@@ -28,5 +28,5 @@ watch: main.pdf
 	latexmk -pvc $(MAIN)
 
 lint: $(SOURCES)
-	redpen -c redpen.xml -f latex $(SOURCES)
+	redpen -l 2 -c redpen.xml -f latex $(SOURCES)
 
