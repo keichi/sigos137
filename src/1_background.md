@@ -1,6 +1,6 @@
 # 背景技術
 
-## SDN (Software-Defined Networking)
+## SDN（Software-Defined Networking）
 
 <!-- SDNの説明 -->
 SDN-MPIは，計算ノード間を接続するの相互結合網がSDNアーキテクチャを採用している
