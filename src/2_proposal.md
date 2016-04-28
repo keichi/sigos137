@@ -16,7 +16,7 @@ SDNコントローラは，MPIパケットのタグに基づいて，パケッ�
 算ノードに隣接するスイッチは，計算ノードにパケットを転送する前に，タグを除去す
 る．
 
-![提案手法のアーキテクチャ\label{fig:proposal-arch}](proposal-arch.pdf)
+![提案手法の全体像の概要\label{fig:proposal-arch}](proposal-arch.pdf)
 
 ## タグの格納場所の検討
 

@@ -45,5 +45,5 @@ MPIを利用するアプリケーションから分散プロセス間の通信�
 ドは低くなければいけない．また，MPIアプリケーションのソースコードへの変更は最
 小で済むのが望ましい．
 
-![SDN-MPIのコンセプト\label{fig:sdn-mpi}](sdn-mpi.pdf)
+![SDN-MPI概念図\label{fig:sdn-mpi}](sdn-mpi.pdf)
 
