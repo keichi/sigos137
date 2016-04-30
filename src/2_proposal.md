@@ -67,7 +67,3 @@ Linuxカーネルが提供するnetfilter APIは，パケットのフィルタ�
 
 次に，MPIライブラリからタグ付けに必要な情報を取得する方法を検討する．
 
-![2ノード間の帯域幅の比較\label{fig:bw-overhead}](bw.pdf)
-
-![2ノード間の遅延の比較\label{fig:latency-overhead}](latency.pdf)
-
