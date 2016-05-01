@@ -1,11 +1,12 @@
 MARKDOWNS=$(wildcard ./src/*.md)
+TMP_MARKDOWNS=$(MARKDOWNS:.md=.tmd)
 MAIN=src/main.tex
 SOURCES=$(MARKDOWNS:.md=.tex)
 IMAGES=$(wildcard ./img/*.png) $(wildcard ./img/*.pdf)
 REFERENCES=references.bib
 STYLES=ipsj.cls ipsjsort.bst ipsjtech.sty
 
-.SUFFIXES: .tex .pdf .md .png
+.SUFFIXES: .tex .pdf .md .png .tmd
 .PHONY: all clean open watch lint
 
 all: main.pdf
@@ -19,6 +20,7 @@ main.pdf: $(MAIN) $(SOURCES) $(IMAGES) $(REFERENCES) $(STYLES)
 
 clean:
 	latexmk -C $(MAIN)
+	-rm $(TMP_MARKDOWNS)
 	-rm $(SOURCES)
 
 open: main.pdf
@@ -27,6 +29,9 @@ open: main.pdf
 watch: main.pdf
 	latexmk -pvc $(MAIN)
 
-lint: $(SOURCES)
-	redpen -l 2 -c redpen.xml -f latex $(SOURCES)
+.md.tmd:
+	sed -e "s/\\\\[a-z]*\\({.*}\\)\\{0,1\\}//g" $< > $@
+
+lint: $(TMP_MARKDOWNS)
+	redpen -l 2 -c redpen.xml -f markdown $(TMP_MARKDOWNS)
 

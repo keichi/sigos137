@@ -180,4 +180,6 @@ TSWLatexianTemp*
 src/*.tex
 src/*.tex-e
 !src/main.tex
+src/*.md-e
+src/*.tmd
 
