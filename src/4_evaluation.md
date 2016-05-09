@@ -49,10 +49,19 @@
 ## 評価結果
 
 有効帯域幅のベンチマーク結果を図\ref{fig:bw-overhead}に，遅延のベンチマーク結
-果を図\ref{fig:latency-overhead}に示す．これら2つのプロットより，提案手法を使
-用する場合としない場合で，実用上無視できる程度であると言える．
+果を図\ref{fig:latency-overhead}に示す．これら2つプロットにおいて，全てのメッ
+セージサイズで提案手法を使用する場合としない場合で，大きな差が見られない．
+よって，提案手法のタグ付けによるオーバーヘッドは実用上無視できる程度であると言
+える．
 
-![2ノード間の有効帯域幅の比較\label{fig:bw-overhead}](bw.pdf)
+\begin{figure}[t]
+\centering
+\includegraphics{bw.pdf}
+\caption{2ノード間の有効帯域幅の比較\label{fig:bw-overhead}}
+\end{figure}
 
-![2ノード間の遅延の比較\label{fig:latency-overhead}](latency.pdf)
-
+\begin{figure}[t]
+\centering
+\includegraphics{latency.pdf}
+\caption{2ノード間の遅延の比較\label{fig:latency-overhead}}
+\end{figure}

@@ -68,25 +68,26 @@ Osaka University}
 Cybermedia Center, Osaka University}
 
 \author{高橋 慧智}{}{IST}[takahashi.keichi@ais.cmc.osaka-u.ac.jp]
+\author{伊達 進}{}{CMC}[date@cmc.osaka-u.ac.jp]
 \author{Khureltulga Dashdavaa}{}{IST}[huchka@ais.cmc.osaka-u.ac.jp]
 \author{木戸 善之}{}{CMC}[kido@cmc.osaka-u.ac.jp]
-\author{伊達 進}{}{CMC}[date@cmc.osaka-u.ac.jp]
 \author{下條 真司}{}{CMC}[shimojo@cmc.osaka-u.ac.jp]
 
 \begin{abstract}
-SDN-MPIは，ネットワーク内のパケットフローを動的に制御可能にするSDNアーキテクチャを，
-並列分散環境で用いられるプロセス間通信ライブラリMPIに応用する試みである．
-これまで開発してきたSDN-MPIのプロトタイプは，個別のMPI関数を単独で実行した際の
-性能向上を実証した．しかし，実際のアプリケーションは複数の異なるMPI関数を使用
-するため，アプリケーションの通信パターンに応じて適切なネットワーク制御を実行
-する必要がある．本論文では，MPIが送出する各パケットに通信パターンをエンコード
-したタグを付与し，タグに基いてネットワークでパケット制御する手法を提案する．
-提案手法におけるパケットのタグ付けを高速化するために，MPIライブラリと
-連係するカーネルモジュールを試作し，評価した．
+SDN-MPIは，大規模HPCシステム上で動作する並列分散アプリケーションの通信性能を向
+上させることを目的とし，ネットワーク内のパケットフローを動的に制御可能とす
+るSDNを，並列分散プロセス間通信ライブラリMPIに応用する試みである．
+これまでSDN-MPIのプロトタイプ実装により，個別のMPI関数を単独で実行した際の通信
+時間の短縮を実証することができた．しかし，これまでの実装は，MPIの個別の集団通
+信の高速化を実現するに留まっており，複数の集団通信が駆使された実際のMPIア
+プリケーションへの応用のためには，アプリケーションが呼び出すMPI関数相互結
+合網の制御を連動・連携して行う仕組みが必要不可欠である．本稿では、そのよう
+な問題点に着眼し、われわれが開発してきたMPI通信パターンに基づくSDN制御を高
+速化するカーネルモジュールについて報告する．
 \end{abstract}
 
 \begin{jkeyword}
-Message Passing Interface, Software Defined Networking, Loadable Kernel Module
+Message Passing Interface, Software-Defined Networking, Loadable Kernel Module
 \end{jkeyword}
 
 \maketitle
